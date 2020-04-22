@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1708,11 +1708,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012111049580, guid: 18e5bd51a93d147418ebde96080df049, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 1.963
       objectReference: {fileID: 0}
     - target: {fileID: 4000012111049580, guid: 18e5bd51a93d147418ebde96080df049, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4000012111049580, guid: 18e5bd51a93d147418ebde96080df049, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1837,6 +1837,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010652187150, guid: c11a1b8316f425e469028acee630d862, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010652187150, guid: c11a1b8316f425e469028acee630d862, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010652187150, guid: c11a1b8316f425e469028acee630d862, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010652187150, guid: c11a1b8316f425e469028acee630d862, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000011186377928, guid: c11a1b8316f425e469028acee630d862, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010899958234, guid: c11a1b8316f425e469028acee630d862,
+        type: 3}
+      propertyPath: field of view
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010899958234, guid: c11a1b8316f425e469028acee630d862,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010899958234, guid: c11a1b8316f425e469028acee630d862,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 34.850533
+      objectReference: {fileID: 0}
+    - target: {fileID: 20000010899958234, guid: c11a1b8316f425e469028acee630d862,
+        type: 3}
+      propertyPath: m_FOVAxisMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010340955834, guid: c11a1b8316f425e469028acee630d862,
+        type: 3}
+      propertyPath: worldCenterMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1099686155300184527, guid: c11a1b8316f425e469028acee630d862,
+        type: 3}
+      propertyPath: m_CameraOutput
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3187,8 +3233,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -42}
-  m_SizeDelta: {x: 1280, y: 80.1}
+  m_AnchoredPosition: {x: 9.9935, y: -42}
+  m_SizeDelta: {x: 1900, y: 80.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829718740
 MonoBehaviour:
@@ -3648,7 +3694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 20
+    m_Left: 300
     m_Right: 0
     m_Top: 5
     m_Bottom: 0
