@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SimpleJSON;
+using UnityEngine.UI;
 
 public class RAController : MonoBehaviour
 {
@@ -10,6 +12,10 @@ public class RAController : MonoBehaviour
     public GameObject[] cars_clone;
 
     int index = 0;
+
+    public Text branchLabel, modelLabel;
+
+    JSONNode dataCars;
 
     void Start()
     {
@@ -23,6 +29,7 @@ public class RAController : MonoBehaviour
             car.SetActive(false);
             cars_clone[i] = car;
         }
+        ReadJson();
     }
 
     void Update()
@@ -30,6 +37,8 @@ public class RAController : MonoBehaviour
         for(int i=0; i<=cars_clone.Length-1; i++){
             if(cars_clone[i].name == index.ToString()){
                 cars_clone[i].SetActive(true);
+                branchLabel.text = dataCars[i.ToString()]["branch"];
+                modelLabel.text = dataCars[i.ToString()]["model"];
             }else{
                 cars_clone[i].SetActive(false);
             }
@@ -69,5 +78,10 @@ public class RAController : MonoBehaviour
         Color new_color;
         ColorUtility.TryParseHtmlString(hex_color, out new_color);
         return new_color;
+    }
+
+    void ReadJson(){
+        string data = Resources.Load<TextAsset>("cars").text;
+        dataCars = JSONNode.Parse(data)["cars"];
     }
 }
